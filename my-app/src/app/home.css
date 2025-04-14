@@ -1,0 +1,21 @@
+/* .imag img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+} */
+
+/* .imag:hover img {
+    transform: scale(1.2) rotateY(10deg);
+} */
+
+.mainitm{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease-in-out;
+   
+}
