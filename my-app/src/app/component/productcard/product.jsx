@@ -5,7 +5,7 @@ import "./product.css";
 import Button from '../button/Button';
 import Input from '../input/Input';
 
-export default function Productcard(props) {
+export default function productcard(props) {
 
 
 
