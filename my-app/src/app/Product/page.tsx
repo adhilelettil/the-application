@@ -1,7 +1,7 @@
 
 
 import { productservieses } from '../servieses/servieses';
-// import Productcard from '../component/productcard/Product';
+import Productcard from '../component/Productcard/Product';
 
 // import Button from '../component/button/Button';
 // import Input from '../component/input/Input';
@@ -36,7 +36,7 @@ export default async function Products(props: any) {
      
      <div >
        
-            {/* <Productcard product={filteredProducts}  /> */}
+            <Productcard product={filteredProducts}  />
       </div>
        
       </div>
