@@ -1,7 +1,7 @@
 
 
 import { productservieses } from '../servieses/servieses';
-import Productcard from '../component/Productcard/product';
+import Productcard from '../component/Productcard/Product';
 
 // import Button from '../component/button/Button';
 // import Input from '../component/input/Input';
