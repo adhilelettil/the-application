@@ -2,32 +2,32 @@
   height: auto; /* Adjust height for responsiveness */
   border: 1px solid black;
   background-color: black;
-  padding: 20px; /* Reduced padding for smaller screens */
+  padding: 20px; /* Default padding */
   width: 100%;
   display: flex;
-  flex-direction: column; /* Stack items vertically on smaller screens */
+  flex-direction: column; /* Stack items vertically by default */
 }
 
 .footer {
   background-color: #080707;
   color: #fff;
   height: auto; /* Adjust height for responsiveness */
-  width: 100%; /* Full width for smaller screens */
-  padding: 20px; /* Add padding for better spacing */
+  width: 100%; /* Full width */
+  padding: 20px; /* Default padding */
 }
 
 .footer-top {
   display: flex;
-  flex-direction: column; /* Stack sections vertically on smaller screens */
+  flex-direction: column; /* Stack sections vertically by default */
   gap: 20px; /* Add spacing between sections */
 }
 
 .footer-left, .footer-middle, .footer-right {
-  flex-basis: 100%; /* Take full width on smaller screens */
+  flex-basis: 100%; /* Take full width by default */
 }
 
 .footer-heading {
-  font-size: 16px; /* Adjust font size for smaller screens */
+  font-size: 16px; /* Default font size */
   margin-bottom: 10px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .footer-links li {
-  margin-bottom: 8px; /* Adjust spacing for smaller screens */
+  margin-bottom: 8px; /* Default spacing */
 }
 
 .footer-links a {
@@ -60,14 +60,14 @@
 
 .footer-social a {
   color: #fff;
-  font-size: 18px; /* Adjust icon size for smaller screens */
+  font-size: 18px; /* Default icon size */
 }
 
 .footer-bottom {
   background-color: #060606;
-  width: 100%; /* Full width for smaller screens */
+  width: 100%; /* Full width */
   text-align: center; /* Center-align content */
-  padding: 10px; /* Add padding for better spacing */
+  padding: 10px; /* Default padding */
 }
 
 .footer-bottom-links {
@@ -77,7 +77,7 @@
   display: flex;
   flex-wrap: wrap; /* Wrap links to the next line if needed */
   justify-content: center; /* Center-align links */
-  gap: 10px; /* Add spacing between links */
+  gap: 10px; /* Default spacing between links */
 }
 
 .footer-bottom-links li {
@@ -87,28 +87,76 @@
 .footer-bottom-links a {
   color: #fff;
   text-decoration: none;
-  padding: 5px; /* Adjust padding for smaller screens */
+  padding: 5px; /* Default padding */
 }
 
 /* Media query for phones */
 @media (max-width: 768px) {
   .footerpart {
-      padding: 10px; /* Reduce padding for smaller screens */
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 
   .footer-heading {
-      font-size: 14px; /* Further reduce font size */
+    font-size: 14px; /* Reduce font size */
   }
 
   .footer-links li {
-      margin-bottom: 5px; /* Reduce spacing */
+    margin-bottom: 5px; /* Reduce spacing */
   }
 
   .footer-social a {
-      font-size: 16px; /* Adjust icon size */
+    font-size: 16px; /* Adjust icon size */
   }
 
   .footer-bottom-links {
-      gap: 5px; /* Reduce spacing between links */
+    gap: 5px; /* Reduce spacing between links */
+  }
+}
+
+/* Media query for tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-top {
+    flex-direction: row; /* Arrange sections horizontally */
+    justify-content: space-between; /* Add spacing between sections */
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex-basis: 30%; /* Take up 30% of the width */
+  }
+
+  .footer-heading {
+    font-size: 18px; /* Slightly larger font size */
+  }
+
+  .footer-links li {
+    margin-bottom: 10px; /* Default spacing */
+  }
+
+  .footer-social a {
+    font-size: 20px; /* Larger icon size */
+  }
+}
+
+/* Media query for large desktops */
+@media (min-width: 1025px) {
+  .footer-top {
+    flex-direction: row; /* Arrange sections horizontally */
+    justify-content: space-between; /* Add spacing between sections */
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex-basis: 25%; /* Take up 25% of the width */
+  }
+
+  .footer-heading {
+    font-size: 20px; /* Larger font size */
+  }
+
+  .footer-links li {
+    margin-bottom: 12px; /* Increase spacing */
+  }
+
+  .footer-social a {
+    font-size: 22px; /* Larger icon size */
   }
 }
