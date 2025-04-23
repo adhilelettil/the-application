@@ -21,9 +21,9 @@ export default async function Products(props: any) {
   
  
  
- const filteredProducts = prod.filter((item: {
-   name: any; category: string; 
-}) => item.name.toLowerCase().includes(serchpitm.toLowerCase()));
+const filteredProducts = prod.filter((item: {
+  name: string; category: string; 
+}) => item.name.toLowerCase().includes(serchpitm.toLowerCase()) || item.name.includes(serchpitm));
  
 
 
@@ -31,7 +31,7 @@ export default async function Products(props: any) {
   return (
     <div>
       <div>
-        {/* <Button /> */}
+        
       </div>
      
      <div >
