@@ -1,32 +1,37 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react";
 
-export default function Input(props: any) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const serchproduct=props.searchProduct
+interface InputProps {
+  searchProduct: (searchTerm: string) => void;
+}
 
- 
+export default function Input(props: InputProps) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const { searchProduct } = props;
+
+  useEffect(() => {
+    const debounce = setTimeout(() => {
+      searchProduct(searchTerm);
+    }, 300); 
+
+    return () => clearTimeout(debounce);
+  }, [searchTerm, searchProduct]);
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
     setSearchTerm(e.target.value);
-    // console.log(e.target.value);
-    serchproduct(searchTerm)
-   
   }
 
   return (
-    <div>
+    <div className="d-flex justify-content-center mt-3">
       <input
-      className ="form-control me-2 "
-      
-
+        className="form-control"
         onChange={handleSearch}
         type="text"
         placeholder="Search"
-        style={{ height: "40px", width: "500px", marginLeft: "200px", marginTop:"10px" }}
         value={searchTerm}
+        style={{ maxWidth: "500px" }} 
       />
     </div>
-  )
+  );
 }

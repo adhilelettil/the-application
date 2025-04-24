@@ -23,10 +23,7 @@ export default function productcard(props) {
   
   return (
     <div>
-     
-      <Input  searchProduct={searchProduct}/>
-      <div className="nav-item" style={{marginLeft:"1000px",marginTop:"-50px"}}>
-              <div className="dropdown">
+      <div className="dropdown">
                   <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   category
                     </button>
@@ -36,6 +33,9 @@ export default function productcard(props) {
                   <li><a className="dropdown-item" href="/Product/?itm=samsung">samsung</a></li>
                  </ul>
                        </div>
+      <Input  searchProduct={searchProduct}/>
+      <div className="nav-item" style={{marginLeft:"1000px",marginTop:"-50px"}}>
+             
                
               </div>
         
